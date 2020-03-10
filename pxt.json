@@ -1,7 +1,7 @@
 {
-    "name": "gatorRTC",
+    "name": "Qwiic RTC",
     "version": "0.0.46",
-    "description": "SparkFun gator:RTC",
+    "description": "SparkFun Qwiic RTC",
     "license": "MIT",
     "dependencies": {
         "core": "*"
