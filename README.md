@@ -4,7 +4,7 @@
 
 The Qwiic RTC is a Qwiic compatible RTC based on the RV3028 by Micro Crystal. It's accurate to 1 PPM and runs at extraordinarily low power.
 
-![SparkFun gator:light](https://raw.github.com/d1runberg/pxt-qwiic-rtc/blob/master/pxt.json)  
+![SparkFun Qwiic RTC](https://github.com/d1runberg/pxt-qwiic-rtc/blob/master/icon.jpg?raw=true)  
 
 ## ~ hint
 
