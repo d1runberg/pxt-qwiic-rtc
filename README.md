@@ -1,10 +1,10 @@
-# gator:rtc Real Time Clock
+# SparkFun Qwiic Real Time Clock (RTC)
 
 [![Community Discord](https://img.shields.io/discord/448979533891371018.svg)](https://aka.ms/makecodecommunity)
 
-The gator:rtc is a gator clippable RTC based on the RV3028 by Micro Crystal. It's accurate to 1 PPM and runs at extraordinarily low power.
+The Qwiic RTC is a Qwiic compatible RTC based on the RV3028 by Micro Crystal. It's accurate to 1 PPM and runs at extraordinarily low power.
 
-![SparkFun gator:light](https://raw.githubusercontent.com/sparkfun/pxt-gator-rtc/master/icon.png)  
+![SparkFun gator:light](https://raw.githubusercontent.com/d1runberg/pxt-qwiic-rtc/icon.png)  
 
 ## ~ hint
 
@@ -78,14 +78,6 @@ Use ``||serial write string ||date in mm-dd-yyyy|| ||`` to write the date in mm-
 serial.writeString(gatorRTC.getTimestamp())
 ```
 
-Use ``||serial write string ||button timestamp in HH:MM:SS|| ||`` to write the button timestamp in HH:MM:SS over serial
-
-```blocks
-//Using Serial write to write the date of the timestamp in mm-dd-yyyy
-serial.writeString(gatorRTC.getDateUSATimestamp())
-```
-
-Use ``||serial write string ||button timestamp date in mm-dd-yyyy|| ||`` to write the button timestamp date in mm-dd-yyyy over serial
 
 ##Advanced Blocks
 
@@ -122,8 +114,6 @@ Use ``||serial write string ||button timestamp in yyyy-mm-ddThh:mm:ss|| ||`` to 
 //Using Serial write to write the timestamp date in dd-mm-yyyy
 serial.writeString(gatorRTC.getDateWorld())
 ```
-
-Use ``||serial write string ||button timestamp date in dd-mm-yyyy|| ||`` to write the button timestamp date in dd-mm-yyyy over serial
 
 ```blocks
 //Change between 12 and 24 hour time modes, below will change to 24 hour mode
