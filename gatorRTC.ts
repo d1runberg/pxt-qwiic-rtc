@@ -205,7 +205,7 @@ namespace gatorRTC {
 		let timeString: string = getTimeComponent(TimeType.Hours) + minuteDelimiterString + minutes + secondDelimiterString + seconds + ampmString
 		return timeString
 	}
-	
+
 	/**
 	* Get RTC Time in yyyy-mm-ddThh:mm:ss format. This is the ISO8601 standard timestamp format.
 	*/
@@ -283,65 +283,6 @@ namespace gatorRTC {
 		}
 		let timeString: string = getTimestampComponent(TimeStampType.Hours) + minuteDelimiterString + minutes + secondDelimiterString + seconds + ampmString
 		return timeString
-	}
-	
-	/**
-	* Get RTC button timestamp in yyyy-mm-ddThh:mm:ss format. This is the ISO8601 standard timestamp format.
-	*/
-	//% weight=38
-	//% blockId="gatorRTC_get8601Timestamp"
-	//% block="button timestamp in yyyy-mm-ddThh:mm:ss"
-	//% advanced=true
-	export function get8601Timestamp(): string{
-		let minutes = getTimestampComponent(TimeStampType.Minutes)
-		let seconds = getTimestampComponent(TimeStampType.Seconds)
-		let minuteDelimiterString: string = ":"
-		let secondDelimiterString: string = ":"
-		if (minutes < 10)
-		{
-			minuteDelimiterString = ":0"
-		}
-		if (seconds < 10)
-		{
-			secondDelimiterString = ":0"
-		}
-		let timeString: string = "20" + getTimestampComponent(TimeStampType.Year) + "-" + getTimestampComponent(TimeStampType.Month) + "-" + getTimestampComponent(TimeStampType.Date) + "T" + getTimestampComponent(TimeStampType.Hours) + minuteDelimiterString + minutes + secondDelimiterString + seconds
-		return timeString
-	}
-	
-	/**
-	* Get RTC button timestamp date in mm-dd-yyyy
-	*/
-	//% weight=37
-	//% blockId="gatorRTC_getDateUSATimestamp"
-	//% block="button timestamp date in mm-dd-yyyy"
-	export function getDateUSATimestamp(): string{
-		let timeString: string = getTimestampComponent(TimeStampType.Month) + "-" + getTimestampComponent(TimeStampType.Date) + "-" + "20" + getTimestampComponent(TimeStampType.Year)
-		return timeString
-	}
-	
-	/**
-	* Get RTC button timestamp date in dd-mm-yyyy
-	*/
-	//% weight=36
-	//% blockId="gatorRTC_getDateWorldTimestamp"
-	//% block="button timestamp date in dd-mm-yyyy"
-	//% advanced=true
-	export function getDateWorldTimestamp(): string{
-		let timeString: string = getTimestampComponent(TimeStampType.Date) + "-" + getTimestampComponent(TimeStampType.Month) + "-" + "20" + getTimestampComponent(TimeStampType.Year)
-		return timeString
-	}
-	
-	/**
-	* Get's one component of the most recent button timestamp on the RTC. Select which component you would like to get from the drop down.
-	*/
-	//% weight=35
-	//% blockId="gatorRTC_getTimestampComponent"
-	//% block="value of button timestamp %timeComponent"
-	//% shim=gatorRTC::getTimestampComponent
-	//% advanced=true
-	export function getTimestampComponent(timeComponent: TimeStampType): number{
-		return 0
 	}
 	
 	/**
