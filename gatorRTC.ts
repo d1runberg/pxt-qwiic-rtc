@@ -72,7 +72,7 @@
 
 //% color=#f44242 
 //% icon="\uf017"
-namespace gatorRTC {
+namespace QwiicRTC {
 	// Functions for reading and setting time on the gator:RTC
 	
 	/**
@@ -253,37 +253,6 @@ namespace gatorRTC {
 		return timeString
 	}
 	
-	/**
-	* Get RTC timestamp from button press in HH:MM:SS format
-	*/
-	//% weight=39
-	//% blockId="gatorRTC_getTimestamp"
-	//% block="button timestamp in HH:MM:SS"
-	export function getTimestamp(): string{
-		let minutes = getTimestampComponent(TimeStampType.Minutes)
-		let seconds = getTimestampComponent(TimeStampType.Seconds)
-		let minuteDelimiterString: string = ":"
-		let secondDelimiterString: string = ":"
-		let ampmString: string = ""
-		if (minutes < 10)
-		{
-			minuteDelimiterString = ":0"
-		}
-		if (seconds < 10)
-		{
-			secondDelimiterString = ":0"
-		}
-		if (is12HourMode())
-		{
-			ampmString = " AM"
-			if (isAfternoon())
-			{
-				ampmString = " PM"
-			}
-		}
-		let timeString: string = getTimestampComponent(TimeStampType.Hours) + minuteDelimiterString + minutes + secondDelimiterString + seconds + ampmString
-		return timeString
-	}
 	
 	/**
 	* Switch between standard (12 hour) and military (24 hour) time formats
