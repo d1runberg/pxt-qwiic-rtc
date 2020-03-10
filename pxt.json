@@ -1,5 +1,5 @@
 {
-    "name": "qwiicRTC",
+    "name": "QwiicRTC",
     "version": "0.0.46",
     "description": "package for using SparkFun Qwiic RTC with the micro:bit",
     "license": "MIT",
